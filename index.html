@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="なんか適当に作ってみたサイト">
+<title>HelloWorld!</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="apple-touch-icon" href="favicon.ico" sizes="76x76">
+<link rel="icon" href="favicon.ico" sizes="96x96">
+<link rel="stylesheet" type="text/css" href="btn.css">
+<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <script>
+        // この記述を追記
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+                 .register('/hello/service-worker.js') // ここはservice-worker.jsのパスを指定
+                 .then(function() { console.log('Service Worker Registered'); });
+        }
+        // この記述を追記　ここまで
+    </script>
+</head>
+<body background="background.jpg" styl ="background: gray">
+	<div class="container">
+<font color="skyblue" size="8"><p id="Clock1" style="display: inline"></p>
+<script type="text/javascript">
+setInterval('showClock1()',1000);
+function showClock1() {
+var DWs = new Array('Sun.','Mon.','Tue.','Wed.','Thu.','Fri.','Sat.');
+var Now = new Date();
+var YY = Now.getYear();
+if (YY < 2000) { YY += 1900; }
+var MM = set0( Now.getMonth() + 1 );
+var DD = set0( Now.getDate() );
+var DW = DWs[ Now.getDay() ];
+var hh = set0( Now.getHours() );
+var mm = set0( Now.getMinutes() );
+var ss = set0( Now.getSeconds() );
+var RTime1 = ' ' + YY + '.' + MM + '.' + DD + ' ' + DW + ' ' + hh + ':' + mm + ':' + ss + ' ';
+document.getElementById("Clock1").innerHTML = RTime1;
+}
+function set0(num) {
+var ret;
+if( num < 10 ) { ret = "0" + num; }
+else { ret = num; }
+return ret;
+}
+</script>
+</font>
+		<!-- SiteSearch Google -->
+<form method=get action="http://www.google.co.jp/search">
+<table bgcolor="#FFFFFF"><tr valign=top><td>
+<a href="http://www.google.co.jp/">
+<img src="http://www.google.com/logos/Logo_40wht.gif" border="0" alt="Google" align="absmiddle"></a>
+</td>
+<td>
+<input type=text name=q size=31 maxlength=255 value="">
+<input type=hidden name=ie value=Shift_JIS>
+<input type=hidden name=oe value=Shift_JIS>
+<input type=hidden name=hl value="ja">
+<input type=submit name=btnG value="検索！(日本語だと文字化けします)">
+<font size=-1>
+<input type=hidden name=domains value="●●●"><br>
+</font>
+</td></tr></table>
+<!-- SiteSearch Google -->
+</form><a href="my/O.html"><font color="black"></a></font><br>
+<style>
+.buttonstyle {
+background-color: gray;
+color: black;
+border: 2px solid #e5af42;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin-left:20px;
+}
+
+.buttonstyle:hover {
+background-color: #e5af42;
+color: white;
+}
+</style>
+<a class="buttonstyle" href="https://www.google.com/?gws_rd=ssl">
+            <font color="blue" size="5">G</font><font color="red" size="5">o</font><font color="yellow" size="5">o</font><font color="blue" size="5">g</font><font color="green" size="5">l</font><font color="red" size="5">e</font></a>
+<a class="buttonstyle" href="https://www.yahoo.co.jp/"><font color="red" size="5">Yahoo</font></a>
+<a class="buttonstyle" href="https://duckduckgo.com/"><font color="purple" size="5">Duckduckgo</font></a><br>
+<a class="buttonstyle" href="TYOUSEN/google/Google.html"><font color="black" size="5">ぐーぐるうう？</font></a>
+<a class="buttonstyle" href="http://nimwebsite.php.xdomain.jp/ke.php"><font color="black" size="5">掲示板</font></a>
+<a class="buttonstyle" href="http://nimwebsite.php.xdomain.jp/keijiban/ke.php"><font color="black" size="5">掲示板 New</font></a>
+<a class="buttonstyle" href="game/Minesweeper.html"><font color="black" size="5">マインスイーパー</font></a>
+<a class="buttonstyle" href="build/build.html"><font color="black" size="5">作ったやつ</font></a>
+<br>
+
+<font color="blue" size="7"><a href="TYOUSEN/TYOUSEN.html">NEWS!</a></font><br>
+<font color="white">
+<h1>テストやだなぁ～</h1>
+</font>
+	</div></div>
+	    <script>
+    if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service_worker.js').then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+    });
+    }
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue!'
+      },
+      methods: {
+        reverseMessage: function () {
+          this.message = this.message.split('').reverse().join('')
+        }
+      }
+    });
+    </script>
+<!-- Compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
