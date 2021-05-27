@@ -173,7 +173,7 @@
 if (top.location.href.match(/\?kitiku$/)) {
                       mcd.load();
                       mcd.play();
-                    } else {
+                    } else if (!top.location.href.match(/\?kitiku$/)) {
                       mc.play();
                     }
   </script>
