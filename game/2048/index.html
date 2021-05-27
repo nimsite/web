@@ -142,6 +142,20 @@
 </ul>
 
 </details>
+  <script>
+    window.onload = function() {
+  // ページ読み込みと同時にロード
+  wa.loadFile("./bgm/超越人力.mp3", function(buffer) {
+    wa.play(buffer);
+
+    // ユーザーイベント
+    var event = "click";
+    document.addEventListener(event, function() {
+      wa.playSilent();
+    });
+  });
+}
+  </script>
   <script src="js/bind_polyfill.js"></script>
   <script src="js/classlist_polyfill.js"></script>
   <script src="js/animframe_polyfill.js"></script>
