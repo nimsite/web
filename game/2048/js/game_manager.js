@@ -180,6 +180,8 @@ GameManager.prototype.move = function (direction) {
           if (merged.value === 2048) self.won = true;            
           }
 
+          var music1 = new Audio('bgm/超越神力.mp3');
+
           if (!top.location.href.match(/\?noback$/)) {
           if (merged.value === 2048) {
            document.body.style.background = 'url("images/b2048.png")';
@@ -222,6 +224,7 @@ GameManager.prototype.move = function (direction) {
           } else if (merged.value === 6) { 
             document.body.style.background = 'url("images/b6.png")';
           } else if (merged.value === 4) { 
+            music1.play();
             document.body.style.background = 'url("images/b4.png")';
           }
         }
