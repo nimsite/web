@@ -157,7 +157,11 @@
    var mcd = new Audio('se/syugyo.mp3');
    var mc = new Audio('se/syu.mp3');
    var yattenai = new Audio('se/yattenai.mp3');
-
+   function load(){
+     mc.load();
+     yattenai.load();
+     mcd.load();
+   }
              function bucl() {
                       mc.load();
                       mc.play();
@@ -171,5 +175,6 @@ if (top.location.href.match(/\?kitiku$/)) {
                       mcd.play();
                     }
   </script>
+  <a onclick="load();">load</a>
 </body>
 </html>
