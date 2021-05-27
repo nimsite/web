@@ -142,20 +142,6 @@
 </ul>
 
 </details>
-  <script>
-    window.onload = function() {
-  // ページ読み込みと同時にロード
-  wa.loadFile("se/oyaa.mp3", function(buffer) {
-    wa.play(buffer);
-
-    // ユーザーイベント
-    var event = "click";
-    document.addEventListener(event, function() {
-      wa.playSilent();
-    });
-  });
-}
-  </script>
   <script src="js/bind_polyfill.js"></script>
   <script src="js/classlist_polyfill.js"></script>
   <script src="js/animframe_polyfill.js"></script>
@@ -167,16 +153,17 @@
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
   <script type="text/javascript">
-   var mc = new Audio('se/syu.mp3');
-   var mcd = new Audio('se/syugyo.mp3');
-   var yattenai = new Audio('se/yattenai.mp3');
+   
              function bucl() {
+                      var mc = new Audio('se/syu.mp3');
                       mc.play();
-                    }
+                      }
             function ytni() {
+                      var yattenai = new Audio('se/yattenai.mp3');
                       yattenai.play();
                     }
 if (top.location.href.match(/\?kitiku$/)) {
+                      var mcd = new Audio('se/syugyo.mp3');
                       mcd.play();
                     }
   </script>
