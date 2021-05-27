@@ -591,7 +591,7 @@ hr {
     -ms-user-select: none;
     -ms-touch-action: none;
     touch-action: none;
-    background: #bbada0;
+    background: #ca1dff;
     border-radius: 6px;
     width: 280px;
     height: 280px;
@@ -605,7 +605,7 @@ hr {
       right: 0;
       bottom: 0;
       left: 0;
-      background: rgba(238, 228, 218, 0.5);
+      background: rgba(255, 174, 93, 0.5);
       z-index: 100;
       text-align: center;
       -webkit-animation: fade-in 800ms ease 1200ms;
@@ -625,7 +625,7 @@ hr {
         margin-top: 59px; }
       .game-container .game-message a {
         display: inline-block;
-        background: #8f7a66;
+        background: #ffae63;
         border-radius: 3px;
         padding: 0 20px;
         text-decoration: none;
