@@ -127,8 +127,11 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
+  if (top.location.href.match(/\?kitiku$/)) {
+  var message = won ? "最終解脱成功!" : "ポアされた!";
+  } else {
   var message = won ? "解脱成功!" : "ポアするぞ!";
-
+  }
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
 };

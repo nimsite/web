@@ -155,10 +155,13 @@ GameManager.prototype.move = function (direction) {
       if (tile) {
         var positions = self.findFarthestPosition(cell, vector);
         var next      = self.grid.cellContent(positions.next);
-
         // Only one merger per row traversal?
         if (next && next.value === tile.value && !next.mergedFrom) {
+          if (top.location.href.match(/\?kitiku$/)) {
+          var merged = new Tile(positions.next, tile.value + 2);
+          } else {
           var merged = new Tile(positions.next, tile.value * 2);
+          }
           merged.mergedFrom = [tile, next];
 
           self.grid.insertTile(merged);
@@ -171,10 +174,63 @@ GameManager.prototype.move = function (direction) {
           self.score += merged.value;
 
           // The mighty 2048 tile
-          if (merged.value === 2048) self.won = true;
+          if (top.location.href.match(/\?kitiku$/)) {
+          if (merged.value === 30) self.won = true;
+          } else {
+          if (merged.value === 2048) self.won = true;            
+          }
+
+          if (!top.location.href.match(/\?noback$/)) {
+          if (merged.value === 2048) {
+           document.body.style.background = 'url("images/b2048.png")';
+          } else if (merged.value === 1024) { 
+            document.body.style.background = 'url("images/b1024.png")';
+          } else if (merged.value === 512) {
+            document.body.style.background = 'url("images/b512.png")';
+          } else if (merged.value === 256) { 
+            document.body.style.background = 'url("images/b256.png")';
+          } else if (merged.value === 128) { 
+            document.body.style.background = 'url("images/b128.png")';
+          } else if (merged.value === 64) { 
+            document.body.style.background = 'url("images/b64.png")';
+          } else if (merged.value === 32) { 
+            document.body.style.background = 'url("images/b32.png")';
+          } else if (merged.value === 30) { 
+            document.body.style.background = 'url("images/b30.png")';
+          } else if (merged.value === 28) { 
+            document.body.style.background = 'url("images/b28.png")';
+          } else if (merged.value === 26) { 
+            document.body.style.background = 'url("images/b26.png")';
+          } else if (merged.value === 24) { 
+            document.body.style.background = 'url("images/b24.png")';
+          } else if (merged.value === 22) { 
+            document.body.style.background = 'url("images/b22.png")';
+          } else if (merged.value === 20) { 
+            document.body.style.background = 'url("images/b20.png")';
+          } else if (merged.value === 18) { 
+            document.body.style.background = 'url("images/b18.png")';
+          } else if (merged.value === 16) { 
+            document.body.style.background = 'url("images/b16.png")';
+          } else if (merged.value === 14) { 
+            document.body.style.background = 'url("images/b14.png")';
+          } else if (merged.value === 12) { 
+            document.body.style.background = 'url("images/b12.png")';
+          } else if (merged.value === 10) { 
+            document.body.style.background = 'url("images/b10.png")';
+          } else if (merged.value === 8) { 
+            document.body.style.background = 'url("images/b8.png")';
+          } else if (merged.value === 6) { 
+            document.body.style.background = 'url("images/b6.png")';
+          } else if (merged.value === 4) { 
+            document.body.style.background = 'url("images/b4.png")';
+          }
+        }
+
         } else {
           self.moveTile(tile, positions.farthest);
         }
+
+
 
         if (!self.positionsEqual(cell, tile)) {
           moved = true; // The tile moved from its original cell!
