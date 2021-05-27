@@ -152,24 +152,22 @@
   <script src="js/local_storage_manager.js"></script>
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
-  
-  <audio id="mccc" preload="auto">
-    <source src="se/syu.mp3" type="audio/mp3">
-  </audio>
-  
   <script type="text/javascript">
-   
+
    var mcd = new Audio('se/syugyo.mp3');
    var mc = new Audio('se/syu.mp3');
    var yattenai = new Audio('se/yattenai.mp3');
-   
+
              function bucl() {
-              document.getElementById( 'mccc' ).play() ;
+                      mc.load();
+                      mc.play();
                       }
             function ytni() {
+                      yattenai.load();
                       yattenai.play();
                     }
 if (top.location.href.match(/\?kitiku$/)) {
+                      mcd.load();
                       mcd.play();
                     }
   </script>
