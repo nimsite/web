@@ -38,7 +38,7 @@
     </div>
 
     <div class="above-game">
-      <a class="restart-button">修行するぞ！</a>
+      <a class="restart-button" onclick="bucl();">修行するぞ！</a>
     </div>
 
     <div class="game-container">
@@ -46,7 +46,7 @@
         <p></p>
         <div class="lower">
 	        <a class="keep-playing-button">修行続行</a>
-          <a class="retry-button">転生</a>
+          <a class="retry-button" onclick="ytni();">転生</a>
         </div>
       </div>
       <div class="grid-container">
@@ -152,5 +152,19 @@
   <script src="js/local_storage_manager.js"></script>
   <script src="js/game_manager.js"></script>
   <script src="js/application.js"></script>
+  <script type="text/javascript">
+   var mc = new Audio('se/syu.mp3');
+   var mcd = new Audio('se/syugyo.mp3');
+   var yattenai = new Audio('se/yattenai.mp3');
+             function bucl() {
+                      mc.play();
+                    }
+            function ytni() {
+                      yattenai.play();
+                    }
+if (top.location.href.match(/\?kitiku$/)) {
+                      mcd.play();
+                    }
+  </script>
 </body>
 </html>

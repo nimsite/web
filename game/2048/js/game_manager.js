@@ -180,34 +180,49 @@ GameManager.prototype.move = function (direction) {
           if (merged.value === 2048) self.won = true;            
           }
 
-          var music = new Audio('bgm/超越神力.mp3');
+          var nand = new Audio('se/nanda.mp3');
+          var mc = new Audio('se/syu.mp3');
+          var tyou = new Audio('se/tyouetu.mp3');
+          var oya = new Audio('se/oyaa.mp3');
+          var tdm = new Audio('se/todoma.mp3');
+          var tntr = new Audio('se/tantra.mp3');
+          var syc = new Audio('se/syoco.mp3');
 
           if (!top.location.href.match(/\?noback$/)) {
           if (merged.value === 2048) {
+            syc.play();
            document.body.style.background = 'url("images/b2048.png")';
-          } else if (merged.value === 1024) { 
+          } else if (merged.value === 1024) {
+            tntr.play(); 
             document.body.style.background = 'url("images/b1024.png")';
           } else if (merged.value === 512) {
+            tdm.play();
             document.body.style.background = 'url("images/b512.png")';
           } else if (merged.value === 256) { 
+            tyou.play();
             document.body.style.background = 'url("images/b256.png")';
           } else if (merged.value === 128) { 
+            nand.play(); 
             document.body.style.background = 'url("images/b128.png")';
-          } else if (merged.value === 64) { 
+          } else if (merged.value === 64) {
+            oya.play(); 
             document.body.style.background = 'url("images/b64.png")';
           } else if (merged.value === 32) { 
             document.body.style.background = 'url("images/b32.png")';
-          } else if (merged.value === 30) { 
+          } else if (merged.value === 30) {
+            syc.play(); 
             document.body.style.background = 'url("images/b30.png")';
           } else if (merged.value === 28) { 
             document.body.style.background = 'url("images/b28.png")';
           } else if (merged.value === 26) { 
+            tyou.play();
             document.body.style.background = 'url("images/b26.png")';
           } else if (merged.value === 24) { 
             document.body.style.background = 'url("images/b24.png")';
           } else if (merged.value === 22) { 
             document.body.style.background = 'url("images/b22.png")';
           } else if (merged.value === 20) { 
+            nand.play(); 
             document.body.style.background = 'url("images/b20.png")';
           } else if (merged.value === 18) { 
             document.body.style.background = 'url("images/b18.png")';
@@ -215,7 +230,8 @@ GameManager.prototype.move = function (direction) {
             document.body.style.background = 'url("images/b16.png")';
           } else if (merged.value === 14) { 
             document.body.style.background = 'url("images/b14.png")';
-          } else if (merged.value === 12) { 
+          } else if (merged.value === 12) {
+            oya.play();  
             document.body.style.background = 'url("images/b12.png")';
           } else if (merged.value === 10) { 
             document.body.style.background = 'url("images/b10.png")';
@@ -223,8 +239,7 @@ GameManager.prototype.move = function (direction) {
             document.body.style.background = 'url("images/b8.png")';
           } else if (merged.value === 6) { 
             document.body.style.background = 'url("images/b6.png")';
-          } else if (merged.value === 4) { 
-            music.play();
+          } else if (merged.value === 4) {
             document.body.style.background = 'url("images/b4.png")';
           }
         }
