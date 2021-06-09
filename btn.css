@@ -4,6 +4,18 @@
   padding: 0.5em 1em 0.3em;
   border: none;
   border-radius: 5px;
-  background-image: linear-gradient(#c5c9ff 0%, #A588B4 100%);
+  background-image: linear-gradient(#e04646 0%, #bf59f1 100%);
   cursor: pointer;
+  text-align: center;
+  width: 40%;
+}
+.buttonstyle2 {
+  font-size: 40px;
+  display: inline-block;
+  padding: 0.5em 1em 0.3em;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(#48e4ff 0%, #bf59f1 100%);
+  cursor: pointer;
+  width: 82%;
 }
