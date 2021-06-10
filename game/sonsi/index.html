@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>空飛ぶそんし</title>
+
+	<style type="text/css">
+		#sonsi {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	</style>
+
+	<script type="text/javascript">
+		
+		document.write('<img id="sonsi" src="sonsi.png"></img>'); //書き込むぞ idはsonsi
+
+		var x = 0; //0にするぞ
+		var y = 0;
+
+		addEventListener( "keydown", pres ); //キーが押されたのをかくにんします -> presをじっこうするぞ!!
+		function pres(event){ //よしじっこうだ！！
+			var key = event.keyCode; //キーの取得だ!
+				if( key === 37 ) x -= 16;
+				if( key === 38 ) y -= 16;
+				if( key === 39 ) x += 16;
+				if( key === 40 ) y += 16;
+			document.getElementById('sonsi').style.top = y + "px"; //top をかえるんだ
+			document.getElementById('sonsi').style.left = x + "px"; //left をかえるんだ
+		}
+
+	</script>
+</head>
+<body bgcolor="gray" style="background-image: url(sora.jpg);">
+
+</body>
+</html>
